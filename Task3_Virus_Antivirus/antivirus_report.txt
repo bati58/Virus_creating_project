@@ -1,0 +1,29 @@
+
+============================================================
+ANTIVIRUS SCAN REPORT
+============================================================
+Scan Time:          2025-12-12 14:10:20
+Directory:          /home/bati/Desktop/Lab_Project/Task3_Virus_Antivirus
+Files Scanned:      7
+Infected Files:     4
+Scan Duration:      0.01 seconds
+
+📁 INFECTED FILES:
+
+1. ./antivirus.py
+   Hash: 1079c0c99f496441e44d6116da734a8b
+   Size: 8583 bytes
+
+2. ./clean_test.py
+   Hash: 9c72cadc8e6824f8cff0d08fa455d59e
+   Size: 3946 bytes
+
+3. ./another_test.py
+   Hash: e44463f8bd1c46ab2db868fc88bb5c9d
+   Size: 3954 bytes
+
+4. ./virus.py
+   Hash: 85968307a81d383680ec78e7ff9e8a4b
+   Size: 3836 bytes
+
+============================================================

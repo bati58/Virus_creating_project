@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nikto Scan Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        .vulnerability { border: 1px solid #ddd; padding: 15px; margin: 10px 0; }
+        .high { border-left: 5px solid #e74c3c; }
+        .medium { border-left: 5px solid #f39c12; }
+        .low { border-left: 5px solid #3498db; }
+        .info { border-left: 5px solid #2ecc71; }
+        .severity { font-weight: bold; padding: 3px 8px; border-radius: 3px; }
+        .high-sev { background: #e74c3c; color: white; }
+        .medium-sev { background: #f39c12; color: white; }
+        .low-sev { background: #3498db; color: white; }
+        .info-sev { background: #2ecc71; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Nikto Web Vulnerability Scan Report</h1>
+    <p>Target: http://localhost</p>
+    <p>Scan Date: 2025-12-12 14:36:45</p>
+    <hr>
+
+    <div class="vulnerability low">
+        <h3>Information Disclosure</h3>
+        <span class="severity low-sev">LOW</span>
+        <p><strong>Description:</strong> Server banner reveals Apache/2.4.41 (Ubuntu)</p>
+        <p><strong>Solution:</strong> Hide server version in HTTP headers</p>
+    </div>
+
+    <div class="vulnerability medium">
+        <h3>XSS Vulnerability</h3>
+        <span class="severity medium-sev">MEDIUM</span>
+        <p><strong>Description:</strong> Cross-site scripting in search parameter: ?q=<script></p>
+        <p><strong>Solution:</strong> Implement input validation and output encoding</p>
+    </div>
+
+    <div class="vulnerability medium">
+        <h3>Directory Listing</h3>
+        <span class="severity medium-sev">MEDIUM</span>
+        <p><strong>Description:</strong> Directory listing enabled on /images/</p>
+        <p><strong>Solution:</strong> Disable directory listing in server config</p>
+    </div>
+
+    <div class="vulnerability low">
+        <h3>Missing Security Headers</h3>
+        <span class="severity low-sev">LOW</span>
+        <p><strong>Description:</strong> Missing X-Frame-Options, X-Content-Type-Options</p>
+        <p><strong>Solution:</strong> Add security headers to HTTP responses</p>
+    </div>
+
+    <div class="vulnerability info">
+        <h3>Default Files Present</h3>
+        <span class="severity info-sev">INFO</span>
+        <p><strong>Description:</strong> Found /test.php, /phpinfo.php</p>
+        <p><strong>Solution:</strong> Remove default/test files from production</p>
+    </div>
+
+    <div class="vulnerability high">
+        <h3>SQL Injection Possible</h3>
+        <span class="severity high-sev">HIGH</span>
+        <p><strong>Description:</strong> Parameter 'id' in /product.php vulnerable to SQLi</p>
+        <p><strong>Solution:</strong> Use parameterized queries and input validation</p>
+    </div>
+
+    <div class="vulnerability medium">
+        <h3>CSRF Vulnerability</h3>
+        <span class="severity medium-sev">MEDIUM</span>
+        <p><strong>Description:</strong> Forms lack anti-CSRF tokens</p>
+        <p><strong>Solution:</strong> Implement CSRF tokens for all state-changing operations</p>
+    </div>
+
+</body>
+</html>

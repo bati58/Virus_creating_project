@@ -1,0 +1,20 @@
+ARP Spoofing Demonstration Log
+========================================
+
+Network Devices:
+Router: 192.168.1.1
+Victim_PC: 192.168.1.100
+Attacker_PC: 192.168.1.50
+Server: 192.168.1.200
+
+Attack Summary:
+1. Attacker sends fake ARP replies
+2. Victim and Router update ARP tables incorrectly
+3. Traffic rerouted through Attacker
+4. Attacker becomes Man-in-the-Middle
+
+Prevention Methods:
+- Use static ARP entries
+- Implement ARP monitoring
+- Enable port security on switches
+- Use encrypted protocols (HTTPS, VPN)

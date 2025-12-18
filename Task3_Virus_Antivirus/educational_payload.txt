@@ -1,0 +1,2 @@
+This demonstrates how viruses can create files.
+Always practice ethical hacking!

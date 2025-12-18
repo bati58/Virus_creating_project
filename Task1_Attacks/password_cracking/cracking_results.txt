@@ -1,0 +1,8 @@
+Password Cracking Results
+========================================
+Cracked: 4/6 accounts
+
+elsabet:123456
+dave:qwerty
+bati:dragon
+chala:letmein
